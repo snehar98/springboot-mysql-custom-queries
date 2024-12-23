@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Spring Property for App Name -->
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+    <!-- Console log pattern with color coding -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%black(%d{ISO8601}) %highlight(%-5level) %green([${springAppName}]) [%blue(%t)] %yellow(%C{1}): %msg%n%throwable"/>
+    <!-- Default root logging configuration for console output -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- Console Appender to print logs to console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+</configuration>

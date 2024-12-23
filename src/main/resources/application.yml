@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: springboot-mysql-custom-queries
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_details_db?createDatabaseIfNotExist=true #create the database with appropriate name
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    #generate-ddl: false #Disable schema management
+    show-sql: true #Log SQL queries
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        #generate_statistics: true #Monitor Hibernate performance
+  security:
+    admin:
+      name: admin
+      password: 167XFop6dxcfyD1wQF8d
+
+server:
+  port: 8080
+
+management:
+  server:
+    port: 9000
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    show-details: always
+
+logging:
+  level:
+    org.springframework.security: INFO
+    org.springframework.web: INFO
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    disable-swagger-default-url: true
+    validatorUrl: null
+  show-actuator: true
+
