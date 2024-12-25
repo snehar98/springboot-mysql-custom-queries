@@ -4,9 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * This application is to demo the implementation of redis in spring boot projects.
- * This contains essential configurations and common dependencies for building
- * modern java applications
+ * This application is to demo the implementation of mysql in spring boot projects.
  *
  * @author sneharavikumartl
  */

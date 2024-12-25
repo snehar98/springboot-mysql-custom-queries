@@ -104,7 +104,7 @@ public class SecurityConfig {
         http.httpBasic(withDefaults()) // Enabling basic HTTP authentication
                 .csrf(AbstractHttpConfigurer::disable) // Disabling CSRF protection (use with caution)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/swagger-ui/*", "/v3/api-docs", "/v3/api-docs/*", "/swagger-resources/*", "/webjars/*", "/actuator/*", "/error", "/favicon.ico", "/users/*", "/users/*/*").permitAll() // Permitting specific URLs
+                        .requestMatchers("/swagger-ui/*", "/v3/api-docs", "/v3/api-docs/*", "/swagger-resources/*", "/webjars/*", "/actuator/*", "/error", "/favicon.ico", "/employees/*", "/employees/*/*").permitAll() // Permitting specific URLs
                         .requestMatchers("/admin/*", "/admin/*/*").authenticated() // Restricting access to /admin/* to authenticated users
                         .anyRequest().authenticated() // All other requests require authentication
                 );

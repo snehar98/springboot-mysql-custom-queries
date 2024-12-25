@@ -37,6 +37,6 @@ public class AdminController {
             @ApiResponse(responseCode = "404", description = "Employee not found")
     })
     public void deleteEmployee(@PathVariable String employeeId) {
-        employeeService.deleteEmployee(employeeId); // Delegate the deletion logic to the EmployeeService
+        employeeService.deleteEmployee(employeeId);
     }
 }

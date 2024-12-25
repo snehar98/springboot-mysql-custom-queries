@@ -29,8 +29,8 @@ public class OpenAPIConfig {
                         )
                 )
                 .info(new Info()
-                        .title("Spring Boot Redis Caching Demo Implementation API")
-                        .description("OpenAPI documentation for Spring Boot Redis Caching Demo Implementation Application and Actuator")
+                        .title("Spring Boot MySQL Demo Implementation")
+                        .description("OpenAPI documentation for Spring Boot MySQL Demo Implementation Application and Actuator")
                         .version("1.0")
                         .contact(new Contact().name("Sneha").email("sneharavikumar98@gmail.com"))
                 );

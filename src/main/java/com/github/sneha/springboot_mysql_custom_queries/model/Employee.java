@@ -62,4 +62,11 @@ public class Employee {
      */
     @Column(name = "salary", nullable = false)
     private Double salary;
+
+    /**
+     * The department of the employee.
+     */
+    @Column(name = "department", nullable = false)
+    private String dept;
+
 }
